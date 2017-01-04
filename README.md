@@ -1,2 +1,2 @@
-# peow-cms
-static web-site generator
+# Peow CMS
+Static web-site generator
