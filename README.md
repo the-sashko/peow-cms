@@ -12,7 +12,7 @@ Static web-site generator
 + `{%FOO|BAR%}`
 
     ```python
-    print (foo['bar'])
+    print(foo['bar'])
     ```
 + `{%[FOO+1]%}`
 
@@ -48,8 +48,9 @@ Static web-site generator
 	            ...
 	            print(bar2)
 	            ...
+	```
 
-+ ` {!FOO!}`
++ `{!FOO!}`
 
     ```python
     print(open('foo.html').read())
