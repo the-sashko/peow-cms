@@ -38,4 +38,4 @@
 					<div class="clear"></div>
 				</article>
 {:END:}
-{?PAGE<MAXPAGE?}=><a href="/{%SECTION|URI%}/page-[{%PAGE%}-1]/">Назад</a></div>=>{?END?}<a href="#">Архів</a><div id="pagination">{?PAGE>1?}=><a href="/{%SECTION|URI%}/page-[{%PAGE%}+1]/">Вперед</a>=>{?END?}
+{?PAGE<MAXPAGE?}=><a href="/{%SECTION|URI%}/page-{%[PAGE-1]%}/">Назад</a></div>=>{?END?}<a href="#">Архів</a><div id="pagination">{?PAGE>1?}=><a href="/{%SECTION|URI%}/page-{%[PAGE+1]%}/">Вперед</a>=>{?END?}
