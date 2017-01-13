@@ -1,0 +1,14 @@
+{
+	"sitename":"Мракобіс",
+	"domain":"mrakobis.com",
+	"protocol":"https",
+	"git":"repo-name",
+	"ftp":{
+		"protocol":"sftp",
+		"host":"",
+		"path":"/",
+		"login":"",
+		"pswd":""
+	},
+	"onpage":"10"
+}

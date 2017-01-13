@@ -8,4 +8,10 @@ chmod -x build.sh
 chmod 755 build.sh
 chmod -x main.py
 chmod 755 main.py
+mkdir back
+chmod -R 755 back
+mkdir build
+chmod -R 755 build
+mkdir tmp
+chmod -R 755 tmp
 rm -f first-run.sh

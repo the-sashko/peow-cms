@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="{%LANG%}">
+<head>
+		<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Iskander Al-Slobojani" />
+	<meta property="generator" content="PewCMS">
+	<title>{%TITLE%}</title>
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css">
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<body>
+		<header id="site-header">
+			<div id="header-content">
+				<div id="site-title">
+					<h1>
+						<span>Мракобіс</span>
+					</h1>
+				</div>
+				{!'main_menu'!}
+			</div>
+		</header>
+		<div id="container">
+			<div id="main">
+			<main>
+			{?PAGE>1?}=>
+				<nav id="breadcrumbs">
+					<ol>
+						<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumbs-element"></li>
+					</ol>
+				</nav>
+=>
+				<nav id="breadcrumbs">
+					<ol>
+						<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumbs-link">
+							<a title="/" itemprop="url" href="#"><span itemprop="title">{%SECTION|NAME%}</span></a>
+						</li>
+						<li itemscope="/{%SECTION|URI%}/page-{%PAGE%}/" itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumbs-element">Сторінка {%PAGE%}</li>
+					</ol>
+				</nav>
+{?END?}
+{:ARTICLES:ARTICLE:}
+				<article class="post-list-item">
+					<header>
+						<a href="{%ARTICLE|URL%}" class="post-header">
+							<h2 class="post-title">{%ARTICLE|TITLE%}</h2>
+						</a>
+					</header>
+					<div class="post-meta">
+						<a href="{%ARTICLE|URL%}">
+							<img src="{%ARTICLE|IMAGE%}" alt="{%ARTICLE|TITLE%}" title="{%ARTICLE|TITLE%}">
+						</a>
+						<div class="post-meta-data">
+							<div class="post-meta-time"><time datetime="{%ARTICLE|DATETIME|FORMATED_2%}">{%ARTICLE|DATETIME|FORMATED_1%}</time></div>
+							<div class="post-meta-comments">Коментарів: <a href="{%ARTICLE|URL%}">0</a></div>
+							<div class="post-meta-tags">{:ARTICLE|TAGS:TAG}<ul><li><a href="{%TAG|URL%}" title="{%TAG|TITLE%}" rel="tag">#{%TAG|TITLE%}</a></li>{:END:}</ul></div>
+							<div class="post-readmore"><a href="{%ARTICLE|URL%}">Читати повністю</a></div>
+						</div>
+					</div>
+					<div class="post-text">
+						{%ARTICLE|TEXT%}
+					</div>
+					<div class="clear"></div>
+				</article>
+{:END:}
+{?PAGE<MAXPAGE?}=><a href="/{%SECTION|URI%}/page-{%[PAGE-1]%}/">Назад</a></div>=>{?END?}<a href="#">Архів</a><div id="pagination">{?PAGE>1?}=><a href="/{%SECTION|URI%}/page-{%[PAGE+1]%}/">Вперед</a>=>{?END?}
+			</main>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<footer id="footer">
+			<div id="footer-content">
+				<div id="copyright">&copy; <a href="#">Мракобіс {?YEARSTART!=NOW|YEAR?}=>{%YEARSTART%}-{%NOW|YEAR%}=>{%YEARSTART%}{?END?}</a></div>
+			</div>
+		</footer>
+	</body>
+</html>
