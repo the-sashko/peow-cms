@@ -4,7 +4,6 @@ if [ "--ubuntu" == "$1" ] ; then
 fi
 virtualenv -p python3 peowenv
 cp ./scripts/__install/build.sh build.sh
-cp ./scripts/__install/demo content
 chmod -x build.sh
 chmod 755 build.sh
 chmod -x main.py
@@ -15,4 +14,7 @@ mkdir build
 chmod -R 755 build
 mkdir tmp
 chmod -R 755 tmp
+mkdir content
+chmod -R 755 content
+cp -r ./scripts/__install/demo/* content
 rm -f first-run.sh
