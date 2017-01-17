@@ -4,9 +4,9 @@ if [ "--ubuntu" == "$1" ] ; then
 fi
 virtualenv -p python3 peowenv
 source peowenv/bin/activate
-sudo pip3 install markdown2
-sudo pip3 install transliterate
-sudo pip3 install pillow
+sudo -H pip3 install markdown2
+sudo -H pip3 install transliterate
+sudo -H pip3 install pillow
 deactivate
 cp ./scripts/__install/build.sh build.sh
 chmod -x build.sh
