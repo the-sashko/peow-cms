@@ -1,0 +1,30 @@
+				<nav id="breadcrumbs">
+					<ol>
+						<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumbs-element">Головна</li>
+					</ol>
+				</nav>
+				{@CURRENTPOSTS:POST@}
+				<article class="post-list-item">
+					<header>
+						<a href="/p/{%POST|URI%}/" class="post-header">
+							<h2 class="post-title">{%POST|TITLE%}</h2>
+						</a>
+					</header>
+					<div class="post-meta">
+						<a href="/p/{%POST|URI%}/">
+							<img src="media/{%POST|URI%}/list.png" alt="{%POST|TITLE%}" title="{%POST|TITLE%}">
+						</a>
+						<div class="post-meta-data">
+							<div class="post-meta-time"><time datetime="{%POST|ALTDATE%}">{%POST|DATE%}</time></div>
+							<div class="post-meta-comments">Коментарів: <a href="/p/{%POST|URI%}/#disqus_thread">0</a></div>
+							<div class="post-meta-tags"><ul>{@@{%POST|TAGS%}:TAG@}<li><a href="/tag/{%TAG|NAME%}/" title="{%TAG|NAME%}" rel="tag">#{%TAG|TITLE%}</a></li>{@END@@}</ul></div>
+							<div class="post-readmore"><a href="/p/{%POST|URI%}/">Читати повністю</a></div>
+						</div>
+					</div>
+					<div class="post-text">
+						{%POST|SUMMARY%}
+					</div>
+					<div class="clear"></div>
+				</article>
+				{@END@}
+				{#<div id="pagination"><a href="#">Вперед</a><a href="#">Архів</a><a href="#">Назад</a></div>#}

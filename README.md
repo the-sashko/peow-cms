@@ -55,3 +55,9 @@ Static web-site generator
     ```python
     print(open('foo.html').read())
     ```
+
++ `{#Lorem Ipsum#}`
+
+    ```python
+    #Lorem Ipsum
+    ```

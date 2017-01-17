@@ -1,0 +1,13 @@
+				<nav id="breadcrumbs">
+					<ol>
+						<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumbs-link">
+							<a title="#" itemprop="url" href="#"><span itemprop="title">Мітка</span></a>
+						</li>
+						<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumbs-element">Всі</li>
+					</ol>
+				</nav>
+				<div id="tagcloud">
+					{@TAGS:TAG@}
+					<li><a href="/tag/{%TAG|NAME%}/" title="Записів: {%TAG|COUNT%}" style="font-size:{%TAG|SIZE%}em;" rel="tag">{%TAG|TITLE%}</a></li>
+					{@END@}
+				</div>

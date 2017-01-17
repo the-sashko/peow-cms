@@ -1,0 +1,21 @@
+{
+    "date": "16.01.2017 20:13:48",
+    "seo": {
+        "description": "the first test article"
+    },
+    "summary": "test test wtf",
+    "taxonomy": {
+        "tags": [
+            "tag1",
+            "tag2",
+            "tag3"
+        ],
+        "topics": [
+            "tema2",
+            "tema3",
+            "tema4"
+        ]
+    },
+    "title": "Hworld",
+    "uri": "world"
+}

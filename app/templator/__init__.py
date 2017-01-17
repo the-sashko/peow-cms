@@ -19,6 +19,7 @@ class Templator():
 			lambda data: self.include(data.group(1)),
 			template,flags=re.U)
 		template=re.sub('\r?\n', '<BR>', template)
+		template = re.sub(r'{#(.*?)#}','',template,flags=re.M|re.U)
 		template = re.sub(r'{@(.*?):(.*?)@}(.*?){@END@}',
 			lambda data: self.iterate(data.group(3),vars[data.group(1).lower()],data.group(2)),
 			template,flags=re.M|re.U)
@@ -43,13 +44,18 @@ class Templator():
 	def iterate(self,template,vars,current):
 		res=''
 		for val in vars:
-			res=res+template.replace('{%'+current+'%}',val)
-			res=res.replace('{@@','{@');
-			res=res.replace('@@}','@}');
-			if(isinstance(vars,dict)):
-				if(isinstance(vars[val],dict)):
-					res=res.replace('{%'+current+'|','{%')
-					res=self.main(res,vars[val])
+			if(isinstance(val,dict)):
+				res=res+template.replace('{%'+current+'|','{%')
+				res = re.sub(r'{@@{%(.*?)%}:(.*?)@}(.*?){@END@@}',
+					lambda data: self.subIterateSubVar(data.group(3),val[data.group(1).lower()],data.group(2)),
+					res,flags=re.M|re.U)
+				res=res.replace('{@@','{@')
+				res=res.replace('@@}','@}')
+				res=self.main(res,val)
+			else:
+				res=res.replace('{@@','{@')
+				res=res.replace('@@}','@}')
+				res=res+template.replace('{%'+current+'%}',val)
 		return self.main(res,self.data)
 
 	def makeVar(self,chunk,data):
@@ -74,11 +80,24 @@ class Templator():
 			return '{{'+chunk+'}}'
 	
 	def condition(self,condition,trueVal,falseVal):
+		condition=self.main(condition,self.data)
+		trueVal=self.main(trueVal,self.data)
+		falseVal=self.main(falseVal,self.data)
 		return self.main(str(eval(str('str("'+trueVal+'") if '+condition+' else str("'+falseVal+'")'))),self.data)
 
 	def include(self,file):
 		try:
-			return self.main(str(open('html/layout/'+file.lower()+'.html', 'r').read()),self.data)
+			return self.main(str(open('content/html/layout/'+file.lower()+'.html', 'r').read()),self.data)
 		except Exception as file:
 			file=str(file)
 			return '{!'+file+'!}'
+
+	def subIterateSubVar(self,template,data,current):
+		res=''
+		for val in data:
+			if(isinstance(val,dict)):
+				res=res+template.replace('{%'+current+'|','{%')
+				res=self.main(res,val)
+			else:
+				res=res+template.replace('{%'+current+'%}',val)
+		return self.main(res,self.data)
