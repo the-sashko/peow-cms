@@ -11,7 +11,9 @@ if [ $(ls back | wc -l) -gt 5 ]; then
 	done
 fi
 rm -rf build/*
+source peowenv/bin/activate
 ./main.py
+deactivate
 cp -r tmp/build/* build
 rm -rf tmp/*
 ./scripts/send.sh
