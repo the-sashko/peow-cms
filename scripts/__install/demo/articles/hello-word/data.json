@@ -1,0 +1,12 @@
+{
+    "taxonomy": {
+        "tags": [
+            "foo"
+        ],
+        "topics": [
+            "bar"
+        ]
+    },
+    "title": "Hello world",
+    "uri": "hello"
+}

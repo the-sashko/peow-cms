@@ -1,22 +1,10 @@
 [
 	{
-		"name":"tag",
-		"title":"Мітка"
+		"name":"foo",
+		"title":"Foo"
 	},
 	{
-		"name":"tag1",
-		"title":"Тег1"
-	},
-	{
-		"name":"tag2",
-		"title":"Тег2"
-	},
-	{
-		"name":"tag3",
-		"title":"Тег3"
-	},
-	{
-		"name":"tag4",
-		"title":"Тег4"
+		"name":"bar",
+		"title":"Bar"
 	}
 ]
