@@ -1,1 +1,1 @@
-scp -r build/* $1@$2:<remotepath>
+scp -r build/* $1@$2:$3

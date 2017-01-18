@@ -4,13 +4,5 @@
 	"lang":"uk",
 	"domain":"www.site.com",
 	"protocol":"http",
-	"git":"repo-name",
-	"ftp":{
-		"protocol":"sftp",
-		"host":"",
-		"path":"/",
-		"login":"",
-		"pswd":""
-	},
 	"onpage":"10"
 }
