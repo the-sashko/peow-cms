@@ -17,25 +17,25 @@ comming soon...
 
 ## Template engine sintax (with equivalent code in python)
 
-+ {%FOO%}
++ `{%FOO%}`
 
 	```python
 	print(foo)
 	```
 
-+ {%FOO|BAR%}
++ `{%FOO|BAR%}`
 
     ```python
     print(foo['bar'])
     ```
 
-+ {%[FOO+1]%}
++ `{%[FOO+1]%}`
 
 	```python
 	print(foo+1)
 	```
 
-+ {?%FOO%>%BAR%?}...{?ELSE?}...{?END?}
++ `{?%FOO%>%BAR%?}...{?ELSE?}...{?END?}`
 
 	```python
 	if(foo>bar):
@@ -44,7 +44,7 @@ comming soon...
         ...
     ```
 
-+ {@FOO:BAR@}...{%BAR%}...{@END@}
++ `{@FOO:BAR@}...{%BAR%}...{@END@}`
 
     ```python
     for bar in foo:
@@ -53,7 +53,7 @@ comming soon...
         ...
     ```
 
-+ {@FOO:BAR@}...{%BAR%}...{@@FOO2:BAR2@}...{%BAR2%}...{@END@@}...{@END@}
++ `{@FOO:BAR@}...{%BAR%}...{@@FOO2:BAR2@}...{%BAR2%}...{@END@@}...{@END@}`
 
 	```python
 	for bar in foo:
@@ -66,13 +66,13 @@ comming soon...
 	            ...
 	```
 
-+ {!FOO!}
++ `{!FOO!}`
 
     ```python
     print(open('foo.html').read())
     ```
 
-+ {#Lorem Ipsum#}
++ `{#Lorem Ipsum#}`
 
     ```python
     #Lorem Ipsum
