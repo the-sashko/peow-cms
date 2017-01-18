@@ -3,6 +3,7 @@ if [ ! -d "peow-cms" ]; then
 	git clone https://github.com/the-sashko/peow-cms.git peow-cms
 	cd peow-cms
 	rm -rf .git
+	rm -rf docs
 	chmod -x first-run.sh
 	chmod 755 first-run.sh
 	if [ "--ubuntu" == "$1" ] ; then
