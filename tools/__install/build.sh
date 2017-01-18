@@ -1,7 +1,9 @@
 #!/bin/bash
+echo "Starting..."
 project_path="$(pwd)/$(dirname $0)"
 cd "${project_path/'/./'/'/'}"
 curr_time=$(date '+%Y-%m-%d_%H-%M-%S')
+echo "Making backup..."
 zip -r tmp/$curr_time.zip build> /dev/null
 cp tmp/$curr_time.zip back/$curr_time.zip
 x=$(ls back | wc -l)
@@ -16,4 +18,5 @@ source peowenv/bin/activate
 deactivate
 cp -r tmp/build/* build
 rm -rf tmp/*
-./scripts/send.sh
+./tools/send.py
+echo "Complete!"

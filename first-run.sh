@@ -1,6 +1,7 @@
 #!/bin/bash
 if [ "--ubuntu" == "$1" ] ; then
-	./scripts/install.sh --ubuntu
+	./tools/install.sh --ubuntu
 else
-	./scripts/install.sh
+	./tools/install.sh
 fi
+./configurator.py
