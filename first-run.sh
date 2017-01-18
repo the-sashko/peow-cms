@@ -4,4 +4,4 @@ if [ "--ubuntu" == "$1" ] ; then
 else
 	./tools/install.sh
 fi
-./configurator.py
+./tools/configurator.py
