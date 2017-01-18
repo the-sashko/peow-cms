@@ -2,8 +2,8 @@
 from app import main
 import sys
 try:
-  main.init()
+    main.init()
 except Exception as e:
-  print('ERROR!')
-  print(e)
-sys.exit()
+    print('ERROR!')
+    print(e)
+    sys.exit()
