@@ -5,3 +5,4 @@ else
 	./tools/install.sh
 fi
 ./tools/configurator.py
+./tools/auth.py

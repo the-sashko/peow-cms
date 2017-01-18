@@ -1,1 +1,1 @@
-scp -r build/* $1@$2:$3
+scp -r build/* $2@$1:$3
