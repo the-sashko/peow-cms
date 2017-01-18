@@ -125,7 +125,7 @@ def buildArticles():
 def buildPages():
 	params['pages']={}
 	for page in os.listdir('content/pages'):
-		if os.path.isdir('content/pages/'+page) and os.path.isfile('content/pages/'+page+'/content.md') and os.path.isfile('content/pages/'+page+'/data.json') and os.path.isdir('content/pages/'+page+'/media'):
+		if os.path.isdir('content/pages/'+page) and os.path.isfile('content/pages/'+page+'/content.md') and os.path.isfile('content/pages/'+page+'/data.json'):
 			params['pages'][page]=json.loads(open('content/pages/'+page+'/data.json', 'r').read())
 			params['pages'][page]['text']=markup.md2html(open('content/pages/'+page+'/content.md', 'r').read())
 			try:
