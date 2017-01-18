@@ -3,17 +3,14 @@ Static web-site generator
 
 ## How to install
 
-Run ```bash
-	bash first-run.sh
-	```
-For Ubuntu-users: ```bash
-	bash first-run.sh --ubuntu
-	```
+Run `./first-run.sh`
+
+For Ubuntu-users: `./first-run.sh --ubuntu`
+
 ## How to generate site
 
-Run ```bash
-	bash build.sh
-	```
+Run `./build.sh`
+
 ## Template structure
 
 comming soon...
