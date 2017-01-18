@@ -17,6 +17,14 @@ source peowenv/bin/activate
 ./main.py
 deactivate
 cp -r tmp/build/* build
+./tools/git.py
+rm -rf tmp/git/*
+cp -r tmp/build/* tmp/git
+cd tmp/git
+git add .
+git commit -m "$curr_time"
+git push
+cd "${project_path/'/./'/'/'}"
 rm -rf tmp/*
 ./tools/send.py
 echo "Complete!"
