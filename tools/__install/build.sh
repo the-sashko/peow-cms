@@ -17,13 +17,15 @@ source peowenv/bin/activate
 ./main.py
 deactivate
 cp -r tmp/build/* build
+mkdir tmp/git
+chmod -R 777 tmp/git
 ./tools/git.py
-rm -rf tmp/git/*
 cp -r tmp/build/* tmp/git
+cp -r content tmp/git/__data
 cd tmp/git
 git add .
 git commit -m "$curr_time"
-git push
+git push -u origin master
 cd "${project_path/'/./'/'/'}"
 rm -rf tmp/*
 ./tools/send.py
