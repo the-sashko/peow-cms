@@ -1,5 +1,5 @@
 # Peow CMS
-Static web-site generator
+Yet another generator static web-sites
 
 ## How to install
 
@@ -15,7 +15,7 @@ Run `./build.sh`
 
 comming soon...
 
-## Template engine sintax (with equvalent code in python)
+## Template engine sintax (with equivalent code in python)
 
 + `{%FOO%}`
 
