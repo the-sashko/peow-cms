@@ -182,6 +182,7 @@ def buildIndex():
 def generateAssets():
 	os.makedirs('tmp/build/assets/css/',0o777,1)
 	shutil.copy('content/assets/css/style.css','tmp/build/assets/css/style.min.css')
+	shutil.copytree('content/assets/img/','tmp/build/assets/img/')
 	minify.css()
 	return 1
 

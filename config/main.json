@@ -1,6 +1,7 @@
 {
 	"sitename":"My site",
 	"sitecreatedate":"2001-09-11",
+	"lang":"uk",
 	"domain":"www.site.com",
 	"protocol":"http",
 	"git":"repo-name",

@@ -1,6 +1,23 @@
 # Peow CMS
 Static web-site generator
 
+## How to install
+
+Run ```bash
+	bash first-run.sh
+	```
+For Ubuntu-users: ```bash
+	bash first-run.sh --ubuntu
+	```
+## How to generate site
+
+Run ```bash
+	bash build.sh
+	```
+## Template structure
+
+comming soon...
+
 ## Template engine sintax (with equvalent code in python)
 
 + `{%FOO%}`
