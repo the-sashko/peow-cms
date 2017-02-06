@@ -1,12 +1,11 @@
 {
     "taxonomy": {
         "tags": [
-            "foo"
+            "test-tag"
         ],
         "topics": [
-            "bar"
+            "test-topic"
         ]
     },
-    "title": "Hello world",
-    "uri": "hello"
+    "title": "Hello world"
 }

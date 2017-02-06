@@ -1,10 +1,6 @@
 [
 	{
-		"name":"foo",
-		"title":"Foo"
-	},
-	{
-		"name":"bar",
-		"title":"Bar"
+		"name":"test-topic",
+		"title":"My first topic"
 	}
 ]

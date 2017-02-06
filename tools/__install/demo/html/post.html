@@ -1,7 +1,7 @@
 				<nav id="breadcrumbs">
 					<ol>
 						<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumbs-link">
-							<a title="#" itemprop="url" href="#"><span itemprop="title">Записи</span></a>
+							<a title="Всі записи" itemprop="url" href="/"><span itemprop="title">Всі записи</span></a>
 						</li>
 						<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="breadcrumbs-element">{%CONTENT|TITLE%}</li>
 					</ol>
@@ -12,11 +12,11 @@
 							{%CONTENT|TITLE%}
 						</h2>
 						<div id="single-meta">
-							<time itemprop="datePublished" content="" datetime=""></time><span class="comments">Коментарів: <a href="#disqus_thread">0</a></span>
+							<time itemprop="datePublished" content="{%CONTENT|ALTDATE%}" datetime="{%CONTENT|ALTDATE%}">{%CONTENT|DATE%}</time><span class="comments">Коментарів: <a href="#disqus_thread">0</a></span>
 						</div>
 					</header>
 					<div id="single-text">
-						<span itemprop="image"><a href="#"><img src="/media/{%CONTENT|URI%}/full.png" id="single-img" alt="" title=""></a></span>
+						<span itemprop="image"><a href="/media/{%CONTENT|URI%}/full.png"><img src="/media/{%CONTENT|URI%}/post.png" id="single-img" alt="{%CONTENT|TITLE%}" title="{%CONTENT|TITLE%}"></a></span>
 						<div itemprop="articleBody">
 							{%CONTENT|TEXT%}
 						</div>

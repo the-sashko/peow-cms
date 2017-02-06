@@ -22,4 +22,6 @@ chmod -R 755 tmp
 mkdir content
 chmod -R 755 content
 cp -r ./tools/__install/demo/* content
+mkdir content/drafts
+chmod -R 755 content/drafts
 rm -f first-run.sh

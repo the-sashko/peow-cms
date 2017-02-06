@@ -1,8 +1,11 @@
 {
-	"sitename":"My site",
+	"sitename":"The site",
 	"sitecreatedate":"2001-09-11",
-	"lang":"uk",
-	"domain":"www.site.com",
+	"lang":"en_US",
+	"domain":"site.com",
 	"protocol":"http",
-	"onpage":"10"
+	"onpage":"10",
+	"meta-description":"The site description",
+	"author":"Username",
+	"assetsversion":"1.0"
 }

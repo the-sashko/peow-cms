@@ -1,10 +1,14 @@
 [
 	{
-		"url":"/foo/",
-		"title":"foo"
+		"url":"/topic/",
+		"title":"Topics"
 	},
 	{
-		"url":"/bar/",
-		"title":"bar"
+		"url":"/tag/",
+		"title":"Tags"
+	},
+	{
+		"url":"/test-page/",
+		"title":"Test page"
 	}
 ]

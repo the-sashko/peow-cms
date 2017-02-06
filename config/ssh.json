@@ -1,5 +1,5 @@
 {
-	"host":"<hostname>",
-	"user":"<username>",
-	"remotepath":"<remotepath>"
+	"host":"site.com",
+	"user":"user",
+	"remotepath":"/foo/bar"
 }
